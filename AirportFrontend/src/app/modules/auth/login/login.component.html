@@ -1,0 +1,32 @@
+<body>
+<div class="container">
+    <h1 class="title">
+        Bun venit la AirComp!
+    </h1>
+    <nav  class="menu" >
+        <a style="color: black;" href="planes">Planes </a>
+        <a style="color: black;" href="tickets">Tickets </a>
+        <a style="color: black;" href="routes"> Routes </a>
+      </nav>
+    <div class = "firstPage">
+        <div class="form-sections">
+            <form [formGroup] = "loginForm" class="form">
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Username" formControlName="username"/>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" type="password" formControlName="password"/>
+                </mat-form-field>
+            </form>
+
+            <button mat-rasied-button (click)="login()" appHoverBtn>
+                Login
+            </button>
+        </div>
+    </div>
+
+</div>
+</body>

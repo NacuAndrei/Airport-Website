@@ -1,0 +1,51 @@
+<body>
+        <h1 class="title">
+            AirComp
+        </h1>
+        <nav  class="menu" >
+            <a style="color: black;" href="planes">Planes </a>
+            <a style="color: black;" href="tickets">Tickets </a>
+            <a style="color: black;" href="routes"> Routes </a>
+          </nav>
+    <div class="firstPage">
+        <p>
+            Sunteti logat ca: {{ loggedUser.username }}
+        </p>
+
+        <button mat-rasied-button (click)="logout()">
+            Logout
+        </button>
+
+        <div class="form-sections">
+            <form [formGroup] = "reviewForm" class="form">
+                <p>Lasati un review!</p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Review</mat-label>
+                    <input matInput placeholder="review" formControlName="review" />
+                </mat-form-field>
+            </form>
+        </div>
+
+        <button mat-rasied-button (click)="fctreview()">
+            Trimite review!
+        </button>
+
+        <p>{{Msg}}</p>
+
+        <div class="form-sections">
+            <form [formGroup] = "raffleForm" class="form">
+                <p>Inscrieti-va la tombola prin introducerea email-ului!</p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="raffle" formControlName="raffle" />
+                </mat-form-field>
+            </form>
+        </div>
+
+        <button mat-rasied-button (click)="fcttombola()">
+            Participa!
+        </button>
+
+        <p>{{Msg1}}</p>
+    </div>
+</body>
